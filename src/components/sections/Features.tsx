@@ -4,10 +4,9 @@ import { SectionData } from '@/types/builder';
 
 interface FeaturesProps {
   section: SectionData;
-  isPreview?: boolean;
 }
 
-export default function Features({ section, isPreview = false }: FeaturesProps) {
+export default function Features({ section }: FeaturesProps) {
   const { 
     title, 
     subtitle, 
@@ -20,6 +19,9 @@ export default function Features({ section, isPreview = false }: FeaturesProps) 
     backgroundColor 
   } = section.props;
 
+  // Ensure proper typing
+  const bgColor = typeof backgroundColor === 'string' ? backgroundColor : '#f8fafc';
+
   const features = [
     { title: feature1Title, description: feature1Description, icon: '🚀' },
     { title: feature2Title, description: feature2Description, icon: '⚡' },
@@ -29,7 +31,7 @@ export default function Features({ section, isPreview = false }: FeaturesProps) 
   return (
     <section 
       className="py-20 px-6 transition-all duration-200"
-      style={{ backgroundColor }}
+      style={{ backgroundColor: bgColor }}
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">

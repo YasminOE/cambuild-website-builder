@@ -4,18 +4,21 @@ import { SectionData } from '@/types/builder';
 
 interface HeroProps {
   section: SectionData;
-  isPreview?: boolean;
 }
 
-export default function Hero({ section, isPreview = false }: HeroProps) {
+export default function Hero({ section }: HeroProps) {
   const { title, subtitle, buttonText, buttonUrl, backgroundImage, backgroundColor } = section.props;
+
+  // Ensure proper typing
+  const bgColor = typeof backgroundColor === 'string' ? backgroundColor : '#1f2937';
+  const bgImage = typeof backgroundImage === 'string' ? backgroundImage : '';
 
   return (
     <section 
       className="relative min-h-[400px] lg:min-h-[600px] flex items-center justify-center px-4 lg:px-6 transition-all duration-200"
       style={{ 
-        backgroundColor,
-        backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
+        backgroundColor: bgColor,
+        backgroundImage: bgImage ? `url(${bgImage})` : undefined,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
@@ -33,7 +36,7 @@ export default function Hero({ section, isPreview = false }: HeroProps) {
         </p>
         <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-center">
           <a
-            href={buttonUrl}
+            href={typeof buttonUrl === 'string' ? buttonUrl : '#'}
             className="inline-block px-6 lg:px-8 py-3 lg:py-4 bg-[#B1AD9A] text-[#FFFBEB] font-semibold rounded-lg hover:bg-[#B1AD9A] transition-all duration-200 transform hover:scale-105 text-sm lg:text-base"
           >
             {buttonText}

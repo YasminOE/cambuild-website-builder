@@ -10,23 +10,22 @@ import Footer from './Footer';
 
 interface SectionRendererProps {
   section: SectionData;
-  isPreview?: boolean;
 }
 
-export default function SectionRenderer({ section, isPreview = false }: SectionRendererProps) {
+export default function SectionRenderer({ section }: SectionRendererProps) {
   switch (section.type) {
     case 'header':
-      return <Header section={section} isPreview={isPreview} />;
+      return <Header section={section} />;
     case 'hero':
-      return <Hero section={section} isPreview={isPreview} />;
+      return <Hero section={section} />;
     case 'features':
-      return <Features section={section} isPreview={isPreview} />;
+      return <Features section={section} />;
     case 'about':
-      return <About section={section} isPreview={isPreview} />;
+      return <About section={section} />;
     case 'contact':
-      return <Contact section={section} isPreview={isPreview} />;
+      return <Contact section={section} />;
     case 'footer':
-      return <Footer section={section} isPreview={isPreview} />;
+      return <Footer section={section} />;
     default:
       return <div>Unknown section type: {section.type}</div>;
   }

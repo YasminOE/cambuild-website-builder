@@ -67,7 +67,7 @@ export default function PreviewArea() {
             ) : (
               sortedSections.map((section) => (
                 <div key={section.id}>
-                  <SectionRenderer section={section} isPreview={isPreviewMode} />
+                  <SectionRenderer section={section} />
                 </div>
               ))
             )}

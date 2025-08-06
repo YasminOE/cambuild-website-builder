@@ -1,13 +1,13 @@
 'use client';
 
 import { SectionData } from '@/types/builder';
+import Image from 'next/image';
 
 interface AboutProps {
   section: SectionData;
-  isPreview?: boolean;
 }
 
-export default function About({ section, isPreview = false }: AboutProps) {
+export default function About({ section }: AboutProps) {
   const { title, content, imageUrl, backgroundColor } = section.props;
 
   // Ensure proper typing
@@ -40,9 +40,11 @@ export default function About({ section, isPreview = false }: AboutProps) {
           
           <div className="relative">
             {imgUrl ? (
-              <img 
+              <Image 
                 src={imgUrl} 
                 alt="About Us" 
+                width={600}
+                height={400}
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
               />
             ) : (

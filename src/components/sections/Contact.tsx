@@ -4,10 +4,9 @@ import { SectionData } from '@/types/builder';
 
 interface ContactProps {
   section: SectionData;
-  isPreview?: boolean;
 }
 
-export default function Contact({ section, isPreview = false }: ContactProps) {
+export default function Contact({ section }: ContactProps) {
   const { title, subtitle, email, phone, address, backgroundColor } = section.props;
 
   // Ensure proper typing

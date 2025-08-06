@@ -9,7 +9,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Trash2, Settings } from 'lucide-react';
 
 export default function SectionEditor() {
-  const { sections, selectedSectionId, updateSection, deleteSection, selectSection } = useBuilderStore();
+  const { sections, selectedSectionId, updateSection, deleteSection } = useBuilderStore();
 
   const selectedSection = sections.find(section => section.id === selectedSectionId);
 

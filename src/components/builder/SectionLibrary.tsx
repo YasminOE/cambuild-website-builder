@@ -2,9 +2,10 @@
 
 import { sectionTemplates } from '@/data/section-templates';
 import { useBuilderStore } from '@/store/builder-store';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Layout, Star, Zap, Users, Mail } from 'lucide-react';
+import { SectionType } from '@/types/builder';
 
 const iconMap = {
   Layout,
@@ -17,8 +18,8 @@ const iconMap = {
 export default function SectionLibrary() {
   const { addSection } = useBuilderStore();
 
-  const handleAddSection = (type: string) => {
-    addSection(type as any);
+  const handleAddSection = (type: SectionType) => {
+    addSection(type);
   };
 
   return (

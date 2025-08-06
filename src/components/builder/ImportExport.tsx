@@ -4,7 +4,7 @@ import { useBuilderStore } from '@/store/builder-store';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Textarea } from '@/components/ui/textarea';
-import { Download, Upload, FileText } from 'lucide-react';
+import { Download, Upload } from 'lucide-react';
 import { useState } from 'react';
 
 export default function ImportExport() {

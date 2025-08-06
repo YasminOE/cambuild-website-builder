@@ -57,10 +57,10 @@ export default function AIChatInput() {
               <p className="mb-1 lg:mb-2 text-xs lg:text-sm">💡 <strong>AI Assistant:</strong></p>
               <p className="text-xs">Hi! I can help you build your website. Try asking me to:</p>
               <ul className="text-xs mt-1 space-y-0.5 lg:space-y-1">
-                <li>• "Add a hero section with a blue background"</li>
-                <li>• "Change the font to something modern"</li>
-                <li>• "Make the layout more responsive"</li>
-                <li>• "Add animations to buttons"</li>
+                <li>• &ldquo;Add a hero section with a blue background&rdquo;</li>
+                <li>• &ldquo;Change the font to something modern&rdquo;</li>
+                <li>• &ldquo;Make the layout more responsive&rdquo;</li>
+                <li>• &ldquo;Add animations to buttons&rdquo;</li>
               </ul>
             </div>
           </div>

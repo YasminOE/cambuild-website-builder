@@ -4,16 +4,18 @@ import { SectionData } from '@/types/builder';
 
 interface HeaderProps {
   section: SectionData;
-  isPreview?: boolean;
 }
 
-export default function Header({ section, isPreview = false }: HeaderProps) {
+export default function Header({ section }: HeaderProps) {
   const { title, showNav, backgroundColor } = section.props;
+
+  // Ensure proper typing
+  const bgColor = typeof backgroundColor === 'string' ? backgroundColor : '#ffffff';
 
   return (
     <header 
       className="w-full py-3 lg:py-4 px-4 lg:px-6 shadow-sm transition-all duration-200"
-      style={{ backgroundColor }}
+      style={{ backgroundColor: bgColor }}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-2">

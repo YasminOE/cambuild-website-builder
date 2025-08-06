@@ -4,10 +4,9 @@ import { SectionData } from '@/types/builder';
 
 interface FooterProps {
   section: SectionData;
-  isPreview?: boolean;
 }
 
-export default function Footer({ section, isPreview = false }: FooterProps) {
+export default function Footer({ section }: FooterProps) {
   const { copyright, backgroundColor, textColor } = section.props;
 
   // Ensure proper typing
@@ -29,7 +28,7 @@ export default function Footer({ section, isPreview = false }: FooterProps) {
               <span className="text-xl font-bold">CAMBUILD</span>
             </div>
             <p className="text-gray-300 max-w-md">
-              Create beautiful websites with CAMBUILD's intuitive drag-and-drop builder. 
+              Create beautiful websites with CAMBUILD&apos;s intuitive drag-and-drop builder. 
               No coding required, just creativity and imagination.
             </p>
           </div>
@@ -56,7 +55,7 @@ export default function Footer({ section, isPreview = false }: FooterProps) {
         </div>
         
         <div className="border-t border-gray-600 pt-8 text-center">
-          <p className="text-gray-300">{copyright}</p>
+          <p className="text-gray-300">{typeof copyright === 'string' ? copyright.replace(/'/g, '&apos;') : copyright}</p>
         </div>
       </div>
     </footer>

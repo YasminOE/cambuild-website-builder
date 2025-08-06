@@ -16,7 +16,6 @@ import {
   DragEndEvent,
 } from '@dnd-kit/core';
 import {
-  arrayMove,
   SortableContext,
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
@@ -26,8 +25,10 @@ import {
 } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 
+import { SectionData } from '@/types/builder';
+
 interface SortableSectionItemProps {
-  section: any;
+  section: SectionData;
   isSelected: boolean;
   onSelect: () => void;
   onDelete: () => void;
