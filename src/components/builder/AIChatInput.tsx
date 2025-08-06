@@ -23,8 +23,9 @@ export default function AIChatInput() {
     <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
       {!isOpen ? (
         <Button
+          variant="outline"
           onClick={() => setIsOpen(true)}
-          className="bg-gradient-to-r from-[#B1AD9A] to-[#9A9685] hover:from-[#9A9685] hover:to-[#8A8675] text-[#FFFBEB] shadow-lg rounded-full px-4 lg:px-6 py-3 flex items-center space-x-2 text-sm lg:text-base"
+          className="!bg-gradient-to-r !from-[#B1AD9A] !to-[#9A9685] hover:!from-[#9A9685] hover:!to-[#8A8675] !text-[#FFFBEB] shadow-lg rounded-full px-4 lg:px-6 py-3 flex items-center space-x-2 text-sm lg:text-base border-[#B1AD9A]"
         >
           <Sparkles className="w-4 h-4 lg:w-5 lg:h-5" />
           <span className="hidden sm:inline">Ask AI Assistant</span>
@@ -75,7 +76,8 @@ export default function AIChatInput() {
             <Button
               type="submit"
               size="sm"
-              className="bg-gradient-to-r from-[#B1AD9A] to-[#9A9685] hover:from-[#9A9685] hover:to-[#8A8675] text-[#FFFBEB] p-2 lg:p-3"
+              variant="outline"
+              className="!bg-gradient-to-r !from-[#B1AD9A] !to-[#9A9685] hover:!from-[#9A9685] hover:!to-[#8A8675] !text-[#FFFBEB] p-2 lg:p-3 border-[#B1AD9A]"
             >
               <Send className="w-3 h-3 lg:w-4 lg:h-4" />
             </Button>
